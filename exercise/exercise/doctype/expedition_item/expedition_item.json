@@ -1,0 +1,50 @@
+{
+ "creation": "2020-06-07 21:23:30.405392",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "lokasi",
+  "quantity",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "lokasi",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lokasi"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-06-07 21:30:10.045928",
+ "modified_by": "Administrator",
+ "module": "Exercise",
+ "name": "Expedition Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -79,13 +79,54 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Purchase Order": {
+		"on_submit": [
+			"exercise.operan_gl.copydatapo",
+		]
+	},
+
+	"Purchase Receipt": {
+		"on_submit": [
+			"exercise.operan_gl.copydataprec",
+		]
+	},
+
+	"Purchase Invoice": {
+		"on_submit": [
+			"exercise.operan_gl.copydatapinv",
+		]
+	},
+
+	"Sales Invoice": {
+		"on_submit": [
+			"exercise.operan_gl.copydatasinv",
+		]
+	},
+
+    "Journal Entry": {
+		"on_submit": [
+			"exercise.operan_gl.copydatajv",
+		],
+	},
+
+    "Item": {
+		"validate": [
+			"exercise.operan_gl.copydataitem",
+		]
+	},
+	# "Purchase Receipt": {
+	# 	"on_submit": [
+	# 		"buana_penta.reference.make_doctype_pr_update_jurnal",
+	# 	],
+	# 	"on_cancel": [
+	# 		"buana_penta.reference.cancel_doctype_pr_update_jurnal"
+	# 	],
+	# 	"validate": [
+	# 		"buana_penta.operan_gl.copydatapinv1",
+	# 	]
+	# },
+}
 
 # Scheduled Tasks
 # ---------------
@@ -126,4 +167,3 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 # 	"Task": "exercise.task.get_dashboard_data"
 # }
-
